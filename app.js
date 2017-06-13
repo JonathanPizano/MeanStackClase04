@@ -5,6 +5,8 @@ var app = express()
 
 apiMarca = require('./routes/marca')
 apiModelo = require('./routes/modelo')
+apiVersion = require('./routes/version')
+apiAnio = require('./routes/anio')
 
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
@@ -22,5 +24,7 @@ app.use(function(req , res, next){
 
 app.use('/api', apiMarca);
 app.use('/api', apiModelo);
+app.use('/api', apiVersion);
+app.use('/api', apiAnio);
 
 module.exports = app;

@@ -30,7 +30,7 @@ function getModelo(req, res){
 }
 
 function getModelos(req, res){
-    Modelo.find({}).sort('anio').exec(function(err,modelos){
+    Modelo.find({}).sort('nombre').exec(function(err,modelos){
         if(err){
             console.log(err)
             res.status(500).send({message:'Error al obtener los modelos', error:err});

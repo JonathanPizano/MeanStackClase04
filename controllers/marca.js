@@ -30,7 +30,7 @@ function getMarca(req, res){
 }
 
 function getMarcas(req, res){
-    Marca.find({}).sort('anio').exec(function(err,marcas){
+    Marca.find({}).sort('nombre').exec(function(err,marcas){
         if(err){
             console.log(err)
             res.status(500).send({message:'Error al obtener los marcas', error:err});
